@@ -1,14 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
+function AddBookForm({uppdatebooks}) {
 
-function AddBookForm() {
 
+    const[newBook,setNewBook]=useState('');
+
+    const handleInputChange = (event) => {
+        setNewBook(event.target.value);
+      };
+function handleClick(event){
+    event.preventDefault();
+    uppdatebooks(newBook);
+    setNewBook('');
+    
+}
   return (
    <>
    <form>
-    <input type='text' placeholder='Book title'>
+    <input type='text' 
+    placeholder='Book title'  
+    value={newBook} 
+    onChange={handleInputChange}
+    />
         
-    </input>
-    <button>Add Book</button>
+   
+    <button onClick={handleClick}>Add Book</button>
    </form>
     </>
   )

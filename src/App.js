@@ -8,13 +8,17 @@ function App() {
     "Don Quixote",
     "One Hundred Years of Solitude"
   ]);
+
+  const uppdatebooks = (newBook) => {
+    setBooks([...books, newBook]);
+  };
   return (
     <>
     <h1>Book List</h1>
     <p>
       in this app you will be able to search for book & add book or delete it
     </p>
-    <AddBookForm/>
+    <AddBookForm uppdatebooks={uppdatebooks}/>
     <Booklist books={books}/>
       
     </>
