@@ -1,12 +1,14 @@
-function Booklist({books}) {
-    
-  
+
+
+function Booklist({ books }) {
     return (
-      <ul>
-        {books.map((book) => (
-          <li>{book}</li>
-        ))}
-      </ul>
+      <>
+        <ul>
+          {books.map((book, index) => (
+            <li key={index}>{book}</li>
+          ))}
+        </ul>
+      </>
     );
   }
   
