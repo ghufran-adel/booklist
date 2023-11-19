@@ -1,9 +1,5 @@
-function Booklist() {
-    const books = [
-      "In Search of Lost Time",
-      "Don Quixote",
-      "One Hundred Years of Solitude"
-    ];
+function Booklist({books}) {
+    
   
     return (
       <ul>
