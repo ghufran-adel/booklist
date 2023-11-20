@@ -22,8 +22,6 @@ function handleClick(event){
     value={newBook} 
     onChange={handleInputChange}
     />
-        
-   
     <button onClick={handleClick}>Add Book</button>
    </form>
     </>
